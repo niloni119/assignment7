@@ -1,0 +1,62 @@
+This is ready data in a code. So example shows their answers.
+
+CODE:
+//check if this this date valid:
+	Data date1 = new Data(29, 2, 2024);
+        Data date2 = new Data(30, 2, 2023);
+        Data date3 = new Data(31, 4, 2022);
+        System.out.println(date1.isValidDate()); // true
+        System.out.println(date2.isValidDate()); // false
+        System.out.println(date3.isValidDate()); // false
+
+//check if you can update date or not. If this date is valid true if not false:
+        Data date = new Data(10, 5, 2023);
+        System.out.println(date.updateDate(29, 2, 2024));
+        System.out.println(date.updateDate(30, 2, 2023));
+
+//print only valid dates(29th febrary 2024):
+        if(date1.isValidDate()){
+            date1.printDate();
+        }
+        if(date2.isValidDate()){
+            date1.printDate();
+        }
+
+//creat an array list and save data here then sort it:
+        ArrayList<Data> dates = new ArrayList<>();
+        dates.add(new Data(28, 2, 2024));
+        dates.add(new Data(28, 2, 2023));
+        dates.add(new Data(1, 1, 2025));
+        dates.add(new Data(4, 3, 2006));
+
+        Collections.sort(dates);
+        for (Data d : dates) {
+            d.printDate();
+        }
+
+//show an day of week definite date:
+        System.out.println(date1.getDayOfWeek());
+
+//calcullate days between two dates:
+        Data date4 = new Data(1, 1, 2025);
+        Data date5 = new Data(30, 1, 2025);
+        System.out.println(date4.calculateDifference(date5));
+
+//////////////////////////////////////////////////////////////
+
+ANSWER:
+true
+false
+false
+true
+false
+February 29, 2024
+March 4, 2006
+February 28, 2023
+February 28, 2024
+January 1, 2025
+THURSDAY
+29
+
+
+First three lines in answer show these dates are valid or not. Next two lines show can we update old date to another. So first date can be changed but second not. Line "February 29, 2024" is valid so we showed it. Next four lines are a list which we sorted. Next shows da of week date "February 29, 2024". Last line is how many days between first January 2025 and thirtieth January 2025.
